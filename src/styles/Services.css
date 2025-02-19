@@ -1,0 +1,67 @@
+.services-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Flexbox for text and image layout */
+.services-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Styling for the text section */
+.services-text {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+.services-text h2 {
+    margin-top: 20px;
+    color: #007bff;
+}
+
+.services-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-text li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Image section */
+.services-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .services-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-text {
+        text-align: center;
+    }
+
+    .services-image img {
+        max-width: 300px;
+    }
+}

@@ -100,3 +100,53 @@
         text-align: center; /* Center list on smaller screens */
     }
 }
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 10px;
+    }
+
+    .home-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center everything */
+        text-align: center; /* Align text in center */
+    }
+
+    .left-image-container,
+    .right-image-container {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .left-image,
+    .right-image {
+        max-width: 300px; /* Adjust image size */
+        height: auto;
+    }
+
+    .text-section {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.booking-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+.booking-button:hover {
+    background-color: #0056b3;
+}
+
+
