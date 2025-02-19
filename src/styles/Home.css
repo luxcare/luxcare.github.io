@@ -1,0 +1,102 @@
+/* Ensure the home container looks clean */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Fix the banner size */
+.home-banner {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Flex container for main content */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Balanced width */
+    margin: auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Left and Right image containers */
+.left-image-container,
+.right-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust left image size */
+.left-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    transform: scaleX(-1); /* Flip image */
+}
+
+/* Adjust right image size */
+.right-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Center the text block fully */
+.text-section {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers all text elements */
+}
+
+/* Center only the heading and bottom text */
+.text-section h1,
+.text-section p {
+    text-align: center; /* Centered heading and bottom text */
+    width: 100%; /* Ensures they take full width */
+}
+
+/* Keep the list left-aligned inside a centered container */
+.text-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left; /* Keep list aligned to the left */
+    display: inline-block; /* Allows it to stay centered */
+}
+
+/* Style for the bullet list */
+.text-section li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-image,
+    .right-image {
+        max-width: 300px;
+    }
+
+    .text-section ul {
+        text-align: center; /* Center list on smaller screens */
+    }
+}

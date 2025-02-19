@@ -1,0 +1,39 @@
+/* Header Container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Logo */
+.logo {
+    height: 200px;
+}
+
+/* Navigation Bar */
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    color: #007BFF;
+}
