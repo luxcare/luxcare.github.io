@@ -137,7 +137,7 @@
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: #007bff;
+    background-color: #476778;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -146,7 +146,7 @@
 }
 
 .booking-button:hover {
-    background-color: #0056b3;
+    background-color: #375160;
 }
 
 
