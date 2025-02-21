@@ -27,7 +27,7 @@ const Bookings = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch("https://luxcare-backend.onrender.com/book-service", {
+            const response = await fetch("https://luxcare-cleaning-backend.onrender.com/book-service", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
