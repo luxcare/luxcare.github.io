@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/luxcare-cleaning/static/css/main.52443cd4.css",
-    "main.js": "/luxcare-cleaning/static/js/main.16037eae.js",
-    "static/js/453.bc4daedc.chunk.js": "/luxcare-cleaning/static/js/453.bc4daedc.chunk.js",
-    "static/media/right.jpg": "/luxcare-cleaning/static/media/right.6183553da572231a6318.jpg",
-    "static/media/left.jpg": "/luxcare-cleaning/static/media/left.73756cc83fb2b6e6badb.jpg",
-    "static/media/cleaner.jpg": "/luxcare-cleaning/static/media/cleaner.6f1f34477f92e6251fc8.jpg",
-    "static/media/banner.jpg": "/luxcare-cleaning/static/media/banner.6af2c672eab1e4c37d82.jpg",
-    "static/media/logo.png": "/luxcare-cleaning/static/media/logo.41feb3616fd33cd287a1.png",
-    "index.html": "/luxcare-cleaning/index.html",
-    "main.52443cd4.css.map": "/luxcare-cleaning/static/css/main.52443cd4.css.map",
-    "main.16037eae.js.map": "/luxcare-cleaning/static/js/main.16037eae.js.map",
-    "453.bc4daedc.chunk.js.map": "/luxcare-cleaning/static/js/453.bc4daedc.chunk.js.map"
+    "main.css": "/static/css/main.52443cd4.css",
+    "main.js": "/static/js/main.423c75cc.js",
+    "static/js/453.bc4daedc.chunk.js": "/static/js/453.bc4daedc.chunk.js",
+    "static/media/right.jpg": "/static/media/right.6183553da572231a6318.jpg",
+    "static/media/left.jpg": "/static/media/left.73756cc83fb2b6e6badb.jpg",
+    "static/media/cleaner.jpg": "/static/media/cleaner.6f1f34477f92e6251fc8.jpg",
+    "static/media/banner.jpg": "/static/media/banner.6af2c672eab1e4c37d82.jpg",
+    "static/media/logo.png": "/static/media/logo.41feb3616fd33cd287a1.png",
+    "index.html": "/index.html",
+    "main.52443cd4.css.map": "/static/css/main.52443cd4.css.map",
+    "main.423c75cc.js.map": "/static/js/main.423c75cc.js.map",
+    "453.bc4daedc.chunk.js.map": "/static/js/453.bc4daedc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.52443cd4.css",
-    "static/js/main.16037eae.js"
+    "static/js/main.423c75cc.js"
   ]
 }
