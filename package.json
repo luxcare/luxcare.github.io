@@ -21,7 +21,7 @@
     "use-places-autocomplete": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Thornhill420.github.io/luxcare-cleaning",
+  "homepage": "https://luxcare.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
