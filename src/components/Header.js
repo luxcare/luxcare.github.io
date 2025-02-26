@@ -6,7 +6,9 @@ import logo from "../assets/logo.png";
 const Header = () => {
     return (
         <header className="header">
-            <img src={logo} alt="LuxCare Logo" className="logo" />
+            <Link to="/">
+                <img src={logo} alt="LuxCare Logo" className="logo" />
+            </Link>
             <nav>
                 <ul className="navbar">
                     <li><Link to="/">Home</Link></li>
