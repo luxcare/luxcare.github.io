@@ -13,6 +13,9 @@ const Bookings = () => {
         notes: "",
     });
 
+    const [loading, setLoading] = useState(false);
+    const [statusMessage, setStatusMessage] = useState("");
+
     const timeSlots = [
         "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
         "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM",
@@ -25,6 +28,8 @@ const Bookings = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        setStatusMessage("Submitting booking... Please wait");
 
         try {
             const response = await fetch("https://luxcare-cleaning-backend.onrender.com/book-service", {
@@ -36,7 +41,7 @@ const Bookings = () => {
             const result = await response.json();
 
             if (response.ok) {
-                alert("Booking request sent successfully!");
+                setStatusMessage("Booking request sent successfully!");
                 setFormData({
                     service: "General Cleaning",
                     date: "",
@@ -48,11 +53,13 @@ const Bookings = () => {
                     notes: "",
                 });
             } else {
-                alert("Failed to send booking request: " + result.error);
+                setStatusMessage("Failed to send booking request: " + result.error);
             }
         } catch (error) {
-            alert("An error occurred: " + error.message);
+            setStatusMessage("An error occurred: " + error.message);
             console.error("Error:", error);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -93,7 +100,10 @@ const Bookings = () => {
                 <label>Special Notes:</label>
                 <textarea name="notes" value={formData.notes} onChange={handleChange}></textarea>
 
-                <button type="submit">Submit Booking</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? "Submitting..." : "Submit Booking"}
+                </button>
+                {statusMessage && <p>{statusMessage}</p>}
             </form>
         </div>
     );

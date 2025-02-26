@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+    const [loading, setLoading] = useState(false);
+    const [statusMessage, setStatusMessage] = useState("");
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -9,6 +11,8 @@ const ContactForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        setStatusMessage("Sending... Please wait");
 
         try {
             const response = await fetch("https://luxcare-cleaning-backend.onrender.com/send-email", {
@@ -20,14 +24,16 @@ const ContactForm = () => {
             const result = await response.json();
 
             if (response.ok) {
-                alert("Message sent successfully!");
+                setStatusMessage("Message sent successfully!");
                 setFormData({ name: "", email: "", message: "" });
             } else {
-                alert("Failed to send message: " + result.error);
+                setStatusMessage("Failed to send message: " + result.error);
             }
         } catch (error) {
-            alert("An error occurred: " + error.message);
+            setStatusMessage("An error occurred: " + error.message);
             console.error("Error:", error);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -44,7 +50,10 @@ const ContactForm = () => {
                 <label>Message:</label>
                 <textarea name="message" value={formData.message} placeholder="Message" onChange={handleChange} required></textarea>
 
-                <button type="submit">Send</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? "Sending..." : "Send"}
+                </button>
+                {statusMessage && <p>{statusMessage}</p>}
             </form>
         </div>
     );
