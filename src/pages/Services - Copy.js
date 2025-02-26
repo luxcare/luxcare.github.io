@@ -12,6 +12,13 @@ const Services = () => {
                 <div className="services-content">
                     {/* Text Section */}
                     <div className="services-text">
+                        <h2>General Cleaning - R250</h2>
+                        <ul>
+                            <li>✔ Dusting & vacuuming</li>
+                            <li>✔ Mopping & Surface cleaning</li>
+                            <li>✔ 2 hours duration</li>
+                        </ul>
+
                         <h2>Deep Cleaning - R450</h2>
                         <ul>
                             <li>✔ General cleaning +</li>
@@ -25,9 +32,6 @@ const Services = () => {
                             <li>✔ Tile and grout cleaning, including hard-to-reach areas</li>
                             <li>✔ 6 hours duration</li>
                         </ul>
-
-                        <h2>Office Space Cleaning</h2>
-                        <p>We clean office spaces of all sizes. Contact us for a custom quote!</p>
                     </div>
 
                     {/* Image Section */}
