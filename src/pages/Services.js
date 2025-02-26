@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Footer from "../components/Footer";
 import "../styles/Services.css";
 import cleanerImage from "../assets/cleaner.jpg"; // Import image
 
 const Services = () => {
+    const navigate = useNavigate(); // Initialize navigation
+
     return (
         <>
             <main className="services-container">
@@ -28,6 +31,11 @@ const Services = () => {
 
                         <h2>Office Space Cleaning</h2>
                         <p>We clean office spaces of all sizes. Contact us for a custom quote!</p>
+
+                        {/* Contact Button */}
+                        <button className="contact-button" onClick={() => navigate("/contact")}>
+                            Contact Us
+                        </button>
                     </div>
 
                     {/* Image Section */}
